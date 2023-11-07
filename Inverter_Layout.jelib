@@ -1,0 +1,43 @@
+# header information:
+HInverter_Layout|9.07
+
+# Views:
+Vlayout|lay
+
+# Cell Inverter_Layout;1{lay}
+CInverter_Layout;1{lay}||mocmos|1690951974818|1697343616247||DRC_last_good_drc_area_date()G1690955289612|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1690955289612
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-5|11||5||
+NMetal-1-P-Active-Con|contact@1||4|11||5||
+NMetal-1-N-Active-Con|contact@3||-6|-19||||
+NMetal-1-N-Active-Con|contact@4||4|-19||||
+NMetal-1-Polysilicon-1-Con|contact@6||-34|-5||||
+NN-Transistor|nmos@0||-1|-19|2||R||SIM_spice_model(D5G1;X-1;Y-20;)Snmos
+NMetal-1-Pin|pin@2||3|-19||||
+NMetal-1-Pin|pin@8||4|-19||||
+NMetal-1-Pin|pin@9||4|-5||||
+NMetal-1-Pin|pin@10||19|-5||||
+Ngeneric:Invisible-Pin|pin@11||-36|-19|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out)=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out)=4.5 rise=1,.tran 0 0.1us,".include D:\\DVD\\C5_Models.txt"]
+NPolysilicon-1-Pin|pin@12||-1|-5||||
+NP-Transistor|pmos@1||-1|11|7||R||SIM_spice_model(D5G1;Y-18;)Spmos
+NMetal-1-P-Well-Con|substr@0||-1|-28|10|||
+NMetal-1-N-Well-Con|well@1||0|23|10|||
+AP-Active|net@5|||S0|pmos@1|diff-top|-4.75|11|contact@0||-5|11
+AP-Active|net@6|||S1800|pmos@1|diff-bottom|2.75|11|contact@1||4|11
+AN-Active|net@7|||S0|nmos@0|diff-top|-4.75|-19|contact@3||-6|-19
+AN-Active|net@8|||S1800|nmos@0|diff-bottom|2.75|-19|contact@4||4|-19
+AMetal-1|net@9||1|S900|well@1||-5|23|contact@0||-5|11
+AMetal-1|net@10||1|S900|contact@3||-6|-19|substr@0||-6|-28
+AMetal-1|net@16||1|S0|contact@4||4|-19|pin@2||3|-19
+AMetal-1|net@34||1|S1800|pin@2||3|-19|pin@8||4|-19
+AMetal-1|net@35||1|S900|contact@1||4|11|pin@9||4|-5
+AMetal-1|net@36||1|S900|pin@9||4|-5|pin@8||4|-19
+AMetal-1|net@37||1|S1800|pin@9||4|-5|pin@10||19|-5
+APolysilicon-1|net@39|||S900|pmos@1|poly-left|-1|4|pin@12||-1|-5
+APolysilicon-1|net@40|||S900|pin@12||-1|-5|nmos@0|poly-right|-1|-14.5
+APolysilicon-1|net@41|||S0|pin@12||-1|-5|contact@6||-34|-5
+Egnd||D5G2;|substr@0||U
+Ein||D5G2;|contact@6||I
+Eout||D5G2;|pin@10||O
+Evdd||D5G2;|well@1||U
+X

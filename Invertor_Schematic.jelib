@@ -1,0 +1,29 @@
+# header information:
+HInvertor_Schematic|9.07
+
+# Views:
+Vschematic|sch
+
+# Cell Invertor_Schematic;1{sch}
+CInvertor_Schematic;1{sch}||schematic|1690350516006|1697289357497|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-21|10||||
+NOff-Page|conn@1||2|10||||
+NGround|gnd@0||-10|-7||||
+NTransistor|nmos@0||-12|5|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;X-1;Y7;)Snmos
+NWire_Pin|pin@0||-10|10||||
+NWire_Pin|pin@1||-13|10||||
+Ngeneric:Invisible-Pin|pin@2||-29|-3|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out)=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out)=4.5 rise=1,.tran 0 0.1us,".include D:\\DVD\\C5_Models.txt"]
+NTransistor|pmos@0||-12|16|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;Y7;)Spmos
+NPower|pwr@0||-10|26||||
+Awire|net@0|||900|nmos@0|s|-10|3|gnd@0||-10|-5
+Awire|net@2|||2700|nmos@0|d|-10|7|pin@0||-10|10
+Awire|net@3|||2700|pin@0||-10|10|pmos@0|s|-10|14
+Awire|net@4|||0|conn@1|a|0|10|pin@0||-10|10
+Awire|net@6|||900|pmos@0|g|-13|16|pin@1||-13|10
+Awire|net@7|||900|pin@1||-13|10|nmos@0|g|-13|5
+Awire|net@8|||1800|conn@0|y|-19|10|pin@1||-13|10
+Awire|net@9|||900|pwr@0||-10|26|pmos@0|d|-10|18
+Ein||D5G2;|conn@0|y|I
+Eout||D5G2;|conn@1|y|O
+X
